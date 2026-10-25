@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Cayanggg ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffb6c9, #ffdde8, #ffc3dc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: #a3154d;
+}
+
+.card {
+  width: 90%;
+  max-width: 390px;
+  padding: 30px 22px;
+  margin: 25px 0;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 10px 40px #b8326650;
+  position: relative;
+  z-index: 2;
+  animation: masuk 1s ease;
+}
+
+@keyframes masuk {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heart {
+  font-size: 75px;
+  animation: degup 1s infinite;
+}
+  .gambar-dia {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 10px auto;
+  display: block;
+}
+
+@keyframes degup {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+
+h1 {
+  font-size: 29px;
+  margin: 15px 0;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  background: #ff4f87;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0 5px 15px #ff4f8750;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+#mesej {
+  display: none;
+  animation: masuk 1s ease;
+}
+
+#mesej h2 {
+  color: #f02e78;
+}
+
+.sampul {
+  font-size: 65px;
+  margin: 15px 0;
+  cursor: pointer;
+  animation: goyang 1.5s infinite;
+}
+
+@keyframes goyang {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+#mesej {
+  display: none;
+  animation: bukaSurat 1.2s ease;
+}
+
+@keyframes bukaSurat {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+  
+.penutup {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.terapung {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: naik linear forwards;
+}
+
+@keyframes naik {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  color: #bb6486;
+  margin-top: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="heart">💗</div>
+
+<img src="Cayang1.jpg" class="gambar-dia"
+     alt="Gambar Cayanggg">
+
+<img src="Cayang2.jpg" class="gambar-dia"
+     alt="Kenangan kita">
+  
+  <h1>Hai, Cayanggg! 🥹</h1>
+
+  <p>
+    Ada sesuatu yang saya nak cakap
+    dekat awak...
+  </p>
+
+  <p>
+    Awak nak tahu tak? 🤭💕
+  </p>
+
+ <div class="sampul">💌</div>
+
+<button onclick="bukaSurprise()">
+  Buka surat cinta saya 💗
+</button>
+
+  <div id="mesej">
+
+    <h2>💌 Surat Khas Untuk Cayanggg 💌</h2>
+
+    <p>
+      Terima kasih sebab hadir dalam hidup saya.
+      Kehadiran awak buat hari-hari saya
+      jadi lebih bermakna. 🫶🏻
+    </p>
+
+    <p>
+      Saya mungkin tak sempurna,
+      tapi saya nak terus belajar untuk
+      menghargai awak dengan sebaiknya.
+    </p>
+
+    <p>
+      Kalau suatu hari awak rasa penat,
+      ingatlah yang awak juga layak disayangi,
+      dihargai dan dibahagiakan. 💗
+    </p>
+
+    <p>
+      Saya harap kita dapat cipta
+      lebih banyak kenangan indah bersama.
+    </p>
+
+    <div class="penutup">
+      I LOVE YOU, CAYANGGG! 💋❤️
+    </div>
+
+    <button onclick="hatiBanyak()">
+      Tekan untuk lebih banyak love 💕
+    </button>
+
+  </div>
+
+  <div class="footer">
+    Made with ❤️ just for you
+  </div>
+
+</div>
+
+<script>
+function buatHati() {
+  const hati = document.createElement("div");
+  hati.className = "terapung";
+
+  const emoji = ["❤️", "💗", "💕", "💖", "💘", "💝"];
+  hati.textContent =
+    emoji[Math.floor(Math.random() * emoji.length)];
+
+  hati.style.left = Math.random() * 100 + "vw";
+  hati.style.fontSize = (18 + Math.random() * 25) + "px";
+  hati.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+  document.body.appendChild(hati);
+
+  setTimeout(() => hati.remove(), 8000);
+}
+
+setInterval(buatHati, 650);
+
+function bukaSurprise() {
+  document.getElementById("mesej").style.display = "block";
+
+  const butang = document.querySelector(".card > button");
+  butang.style.display = "none";
+
+  for (let i = 0; i < 15; i++) {
+    setTimeout(buatHati, i * 100);
+  }
+}
+
+function hatiBanyak() {
+  for (let i = 0; i < 35; i++) {
+    setTimeout(buatHati, i * 100);
+  }
+}
+</script>
+
+</body>
+</html>
